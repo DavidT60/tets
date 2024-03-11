@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="book"/>
+    <field name="acquisition_price"/>
+    <field name="acquisition_date"/>
+    <field name="indentifier"/>
+</tree>

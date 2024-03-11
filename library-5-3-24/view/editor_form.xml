@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form>
+    <group  colspan="1" yexpand="1" yfill="1">
+       <label name="editor_name"/>
+       <field name="editor_name"/>
+       <label name="creation_date"/>
+       <field name="creation_date"/>
+       <field name="genres"/>
+
+    </group>
+</form>

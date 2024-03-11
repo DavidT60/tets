@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<tree>
+    
+    <field name="name"/>
+
+    <field name="gender"/>
+
+    <field name="birth_date"/>
+    
+    <field name="age"/>
+    
+    <field name="number_of_books"/>
+
+    <field name="books"/>
+
+
+    <!-- <field name="my_invisible_field" tree_invisible="1"/> -->
+
+</tree>

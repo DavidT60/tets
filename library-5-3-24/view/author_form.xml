@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form>
+
+  <label name="name"/>
+  <field name="name" />
+
+  <label name="gender"/>
+  <field name="gender"/>
+
+  <label name="birth_date"/>
+  <field name="birth_date"/>
+
+  <label name="dni"/> 
+  <field name="dni" />
+
+  <label name="age"/>
+  <field name="age" />
+
+  <label name="number_of_books"/>
+  <field name="number_of_books"/>
+
+  <field name="books"/>
+   
+  <!-- <label name="my_search_field"/>
+  <field name="my_search_field"/> -->
+
+</form>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="author"/>
+    <field name="book_title"/>
+    <field name="genre"/>
+    <field name="publiced_date"/>
+    <field name="bin_code"/>
+    <field name="latest_exemplary"/>
+</tree>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>        
+    
+    <record model="ir.action.act_window" id="act_author">
+        <field name="name">User</field>
+        <field name="res_model">library.user.checkout</field> 
+    </record>
+
+
+    <record model="ir.action.act_window" id="act_editor">
+        <field name="name">Checkout</field>
+        <field name="res_model">library.user</field> 
+    </record>
+
+
+    <record model="ir.ui.view" id="book_bookcomment_view_form">
+        <field name="model">library.book.bookcomment</field>
+        <field name="inherit" ref="library.book_bookcomment_view_form"/>
+        <field name="name">book_bookcomment_form</field>
+    </record>
+<!-- 
+    <record model="ir.ui.view" id="book_bookcomment_view_list">
+        <field name="model">library.book.bookcomment</field>
+        <field name="inherit" ref="library.book_bookcomment_view_list"/>
+        <field name="name">book_bookcomment_list</field>
+    </record> 
+ -->
+
+
+    <!-- <record model="ir.action.act_window" id="act_comment">
+        <field name="name">Book's Comment</field>
+        <field name="res_model">library_borrow.book.bookcomment</field> 
+    </record> -->
+
+    <!-- <record model="ir.action.act_window.view" id="act_comment_view_list">
+       <field name="sequence" eval="10"/>
+       <field name="view" ref="book_bookcomment_view_list"/>
+       <field name="act_window" ref="act_comment"/>
+    </record>
+
+    <record model="ir.action.act_window.view" id="act_comment_view_form">
+      <field name="sequence" eval="20"/>
+      <field name="view" ref="book_bookcomment_view_form"/>
+      <field name="act_window" ref="act_comment"/>
+    </record> -->
+    <!-- <menuitem parent="library.menu_library" sequence="1" action="act_comment" id="menu_comment"/> -->
+
+
+
+    </data>
+</tryton>

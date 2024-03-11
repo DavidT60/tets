@@ -1,0 +1,80 @@
+
+        <!-- ########## -->
+        <!-- # Editor # -->
+        <!-- ########## -->
+        <!-- ###################################################################### -->
+        <record model="ir.ui.view" id="editor_view_form">
+            <field name="model">library.editor</field>
+            <field name="type">form</field>
+            <field name="name">editor_form</field>
+            <field name="priority" eval="10"/>
+        </record>
+        <record model="ir.ui.view" id="editor_view_list">
+            <field name="model">library.editor</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">editor_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_editor">
+            <field name="name">Library Editors</field>
+            <field name="res_model">library.author</field> 
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_editor_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="editor_view_list"/>
+           <field name="act_window" ref="act_editor"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_editor_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="editor_view_form"/>
+          <field name="act_window" ref="act_editor"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_editor" id="menu_editor"/>
+        <!-- ###################################################################### -->
+
+
+
+
+        <!-- ########## -->
+        <!-- # Author's Book # -->
+        <!-- ########## -->
+        <!-- ###################################################################### -->
+        <record model="ir.ui.view" id="book_view_form">
+            <field name="model">library.book</field>
+            <field name="type">form</field>
+            <field name="name">book_form</field>
+            <field name="priority" eval="10"/>
+        </record>
+        <record model="ir.ui.view" id="book_view_list">
+            <field name="model">library.book</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">book_list</field>
+        </record>
+
+
+
+        <record model="ir.action.act_window" id="act_book">
+            <field name="name">Books</field>
+            <field name="res_model">library.book</field> 
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_book_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="book_view_list"/>
+           <field name="act_window" ref="act_book"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_book_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="book_view_form"/>
+          <field name="act_window" ref="act_book"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_book" id="menu_book"/>
+
+
+
+        <!-- ###################################################################### -->

@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <!--#####-->
+        <!--ROOT MENU-->
+        <!--#####-->
+        <menuitem name="Library" id="menu_library" sequence="1"/>
+
+
+        <!-- ########## -->
+        <!-- # Author # -->
+        <!-- ###################################################################### -->
+        <record model="ir.ui.view" id="author_view_form">
+            <field name="model">library.author</field>
+            <field name="type">form</field>
+            <field name="name">author_form</field>
+            <field name="priority" eval="10"/>
+        </record>
+        <record model="ir.ui.view" id="author_view_list">
+            <field name="model">library.author</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">author_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_author">
+            <field name="name">Authors</field>
+            <field name="res_model">library.author</field> 
+        </record>
+        <record model="ir.action.act_window.view" id="act_author_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="author_view_list"/>
+           <field name="act_window" ref="act_author"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_author_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="author_view_form"/>
+          <field name="act_window" ref="act_author"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_author" id="menu_author"/>
+        <!-- ###################################################################### -->
+
+
+
+
+        <!-- ########## -->
+        <!-- # Editor # -->
+        <!-- ########## -->
+        <!-- ###################################################################### -->
+        <record model="ir.ui.view" id="editor_view_form">
+            <field name="model">library.editor</field>
+            <field name="type">form</field>
+            <field name="priority" eval="10"/>
+            <field name="name">editor_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="editor_view_list">
+            <field name="model">library.editor</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">editor_list</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_editor">
+            <field name="name">Library Editors</field>
+            <field name="res_model">library.editor</field> 
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_editor_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="editor_view_list"/>
+           <field name="act_window" ref="act_editor"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_editor_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="editor_view_form"/>
+          <field name="act_window" ref="act_editor"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_editor" id="menu_editor"/>
+        <!-- ###################################################################### -->
+
+
+
+
+
+
+
+
+        <!-- ########## -->
+        <!-- # Books Genre # -->
+        <!-- ########## -->
+        <!-- ###################################################################### -->
+        <record model="ir.ui.view" id="genre_view_form">
+            <field name="model">library.genre</field>
+            <field name="type">form</field>
+            <field name="name">genre_form</field>
+            <field name="priority" eval="10"/>
+        </record>
+        <record model="ir.ui.view" id="genre_view_list">
+            <field name="model">library.genre</field>
+            <field name="type">tree</field>
+            <field name="name">genre_list</field>
+            <field name="priority" eval="20"/>
+        </record>
+
+
+        <record model="ir.action.act_window" id="act_genre">
+            <field name="name">Library Genre</field>
+            <field name="res_model">library.genre</field> 
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_genre_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="genre_view_list"/>
+           <field name="act_window" ref="act_genre"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_genre_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="genre_view_form"/>
+          <field name="act_window" ref="act_genre"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_genre" id="menu_genre"/>
+
+
+        <!-- ###################################################################### -->
+
+
+
+        <!-- ########## -->
+        <!-- # Author's Book # -->
+        <!-- ########## -->
+        <!-- ###################################################################### -->
+        <record model="ir.ui.view" id="book_view_form">
+            <field name="model">library.book</field>
+            <field name="type">form</field>
+            <field name="name">book_form</field>
+            <field name="priority" eval="10"/>
+        </record>
+        <record model="ir.ui.view" id="book_view_list">
+            <field name="model">library.book</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">book_list</field>
+        </record>
+
+
+
+        <record model="ir.action.act_window" id="act_book">
+            <field name="name">Books</field>
+            <field name="res_model">library.book</field> 
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_book_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="book_view_list"/>
+           <field name="act_window" ref="act_book"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_book_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="book_view_form"/>
+          <field name="act_window" ref="act_book"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_book" id="menu_book"/>
+
+
+
+        <!-- ###################################################################### -->
+
+
+
+
+
+
+        <!-- ########## -->
+        <!-- # Author's Book Commnet # -->
+        <!-- ########## -->
+        <!-- ###################################################################### -->
+
+        <record model="ir.ui.view" id="book_bookcomment_view_form">
+            <field name="model">library.book.bookcomment</field>
+            <field name="type">form</field>
+            <field name="name">book_bookcomment_form</field>
+            <field name="priority" eval="10"/>
+        </record>
+        <record model="ir.ui.view" id="book_bookcomment_view_list">
+            <field name="model">library.book.bookcomment</field>
+            <field name="type">tree</field>
+            <field name="name">book_bookcomment_list</field>
+            <field name="priority" eval="20"/>
+        </record>
+
+        
+
+
+        <record model="ir.action.act_window" id="act_comment">
+            <field name="name">Book's Comment</field>
+            <field name="res_model">library.book.bookcomment</field> 
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_comment_view_list">
+           <field name="sequence" eval="10"/>
+           <field name="view" ref="book_bookcomment_view_list"/>
+           <field name="act_window" ref="act_comment"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_comment_view_form">
+          <field name="sequence" eval="20"/>
+          <field name="view" ref="book_bookcomment_view_form"/>
+          <field name="act_window" ref="act_comment"/>
+        </record>
+        <menuitem parent="menu_library" sequence="1" action="act_comment" id="menu_comment"/>
+
+        <!-- ###################################################################### -->
+
+
+
+
+
+
+        <!-- # Relates #   new action window-->
+        <!-- ########### -->
+        <record model="ir.action.act_window" id="act_genre_author_relation">
+            <field name="name">Author Related</field>
+            <field name="res_model">library.author</field>
+            <!-- <field name="domain" eval="[('genre', '=', Eval('active_id'))]"/> -->
+        </record>
+     
+     
+        <record model="ir.action.act_window.view" id="act_genre_author_relation_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="author_view_list"/> <!--book list  -->
+            <field name="act_window" ref="act_genre_author_relation"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_genre_author_relation_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="author_view_form"/> <!--book from  -->
+            <field name="act_window" ref="act_genre_author_relation"/>
+        </record>
+
+
+
+        <!-- # Relates #   new action window-->
+        <!-- ########### -->
+        <record model="ir.action.act_window" id="act_genre_book_relation">
+            <field name="name">Books Related</field>
+            <field name="res_model">library.book</field>
+            <!-- <field name="domain" eval="[('genre', '=', Eval('active_id'))]"/> -->
+        </record>
+     
+     
+        <record model="ir.action.act_window.view" id="act_genre_book_relation_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="book_view_list"/> <!--book list  -->
+            <field name="act_window" ref="act_genre_book_relation"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_genre_book_relation_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="book_view_form"/> <!--book from  -->
+            <field name="act_window" ref="act_genre_book_relation"/>
+        </record>
+
+
+        <record model="ir.action.keyword" id="act_open_genre_books_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">library.genre,-1</field>
+            <field name="action" ref="act_genre_book_relation"/>
+        </record>
+
+
+        <record model="ir.action.keyword" id="act_open_genre_authors_keyword">
+            <field name="keyword">form_relate</field>
+            <field name="model">library.genre,-1</field>
+            <field name="action" ref="act_genre_author_relation"/>
+        </record>
+
+
+        <record model="ir.action.act_window.domain" id="act_book_domain_recent">
+           <field name="name">Recent</field>
+           <field name="sequence" eval="10"></field>
+           <field name="domain" eval="[('publiced_date', '>', Date(delta_years=-1))]" pyson="1"/>
+        </record>
+
+
+        <record model="ir.action.act_window.domain" id="act_book_domain_all">
+           <field name="name">All</field>
+           <field name="sequence" eval="20"></field>
+           <field name="act_window" ref="act_book"></field>
+        </record>
+
+    </data>
+</tryton>

@@ -1,0 +1,88 @@
+{
+  "tryton": {
+    "data": {
+      "record": [
+        {
+          "field": [
+            "library.author",
+            "form",
+            "author_form",
+            ""
+          ]
+        },
+        {
+          "field": [
+            "library.author",
+            "tree",
+            "",
+            "author_list"
+          ]
+        },
+        {
+          "field": [
+            "library.editor",
+            "form",
+            "editor_form",
+            ""
+          ]
+        },
+        {
+          "field": [
+            "library.editor",
+            "tree",
+            "",
+            "editor_list"
+          ]
+        },
+        {
+          "field": [
+            "library.genre",
+            "form",
+            "genre_form",
+            ""
+          ]
+        },
+        {
+          "field": [
+            "library.genre",
+            "tree",
+            "genre_list",
+            ""
+          ]
+        },
+        {
+          "field": [
+            "library.book",
+            "form",
+            "book_form",
+            ""
+          ]
+        },
+        {
+          "field": [
+            "library.book",
+            "tree",
+            "",
+            "book_list"
+          ]
+        },
+        {
+          "field": [
+            "library.book.bookcomment",
+            "form",
+            "book_bookcomment_form",
+            ""
+          ]
+        },
+        {
+          "field": [
+            "library.book.bookcomment",
+            "tree",
+            "",
+            "book_bookcomment_list"
+          ]
+        }
+      ]
+    }
+  }
+}

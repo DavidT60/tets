@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form>
+  <group  colspan="1" xexpand="1" xfill="1"> 
+    <label name="genre_type"/>
+    <field name="genre_type"/>
+  </group>
+</form>

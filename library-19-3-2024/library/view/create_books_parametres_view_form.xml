@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<form>
+<group  colspan="1" yexpand="1" yfill="1">
+    <label name="book_title"/>
+    <field name="book_title"/>
+    <label name="author"/>
+    <field name="author"/>
+    <label name="editor"/>
+    <field name="editor"/>
+    <label name="genre"/>
+    <field name="genre"/>
+    <label name="publiced_date"/>
+    <field name="publiced_date"/>
+    <label name="bin_code"/>
+    <field name="bin_code"/>
+    <label name="description"/>
+    <field name="description"/>
+</group>
+<notebook colspan="4">
+      <page id="other_data" string="Other Informations">
+        <label name="page_count"/>
+        <field name="page_count"/>
+
+        <label name="edition_stopped"/>
+        <field name="edition_stopped"/>
+      </page>
+ </notebook>
+</form>

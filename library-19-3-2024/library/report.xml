@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.action.report" id="report_opportunity">
+            <field name="name">Report</field> 
+            <field name="model">library.author</field> 
+            <field name="report_name">library.report</field>  
+            <field name="report">library/reportes/file/author.odt</field>
+         </record>
+         <record model="ir.action.keyword" id="report_opportunity_keyword">
+            <field name="keyword">form_print</field>
+            <field name="model">library.author,-1</field>
+            <field name="action" ref="report_opportunity"/>
+         </record>
+
+
+         <record model="ir.action.report" id="report_books">
+             <field name="name">Report Books</field> 
+             <field name="model">library.book</field> 
+             <field name="report_name">library.book.report</field>  
+             <field name="report">library/reportes/file/book.odt</field>
+          </record>
+          <record model="ir.action.keyword" id="report_books_keyword">
+             <field name="keyword">form_print</field>
+             <field name="model">library.book,-1</field>
+             <field name="action" ref="report_books"/>
+          </record>
+
+    </data>
+</tryton>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form>
+    <group  colspan="1" xexpand="1" xfill="1"> 
+      <label name="book"/>
+      <field name="book"/>
+      <label name="acquisition_date"/>
+      <field name="acquisition_date"/>
+    </group>
+  </form>
+  
